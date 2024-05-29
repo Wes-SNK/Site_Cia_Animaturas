@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon_azul.ico" type="image/x-icon">
     <title>Home | Cia. Animaturas</title>
 </head>
 <body>
-    <h1>Cia. Animaturas</h1>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nihil nulla obcaecati cupiditate quidem dolor sint consectetur, nam molestiae accusantium praesentium aspernatur magni inventore suscipit unde pariatur! Adipisci, excepturi esse.
-    </p>   
-    <nav id="menu">
-        <ul class="menu" onmouseover="menuZoom()">
-            <li class="menu_suspenso"><a href="index.html"><img id="logo" src="img/LOGO/preto_100x40.png" alt="Logo Cia. Animaturas P&B" onmouseover="logoAzul()" onmouseout="logoPreta()" onclick="logoMarrom()"></a></li>
-            <li class="menu_suspenso"><a href="#"></a>Quem somos</li>
-            <li class="menu_suspenso"><a href="#"></a>Projetos</li>
-            <li class="menu_suspenso"><a href="#"></a>Espetáculos</li>
-        </ul>
-    </nav>
-    <script>  
+    <div class="background">
+        <div>
+            <!-- menu do site -->
+            <nav id="menu">
+                <ul class="menu" onmouseover="menuZoom()">            
+                    <li class="menu_suspenso"><a href="index.html"><img id="logo" src="img/LOGO/preto_100x40.png" alt="Logo Cia. Animaturas P&B" onmouseover="logoAzul()" onmouseout="logoPreta()"></a></li>
+                    <li class="menu_suspenso"><a href="#"></a>Quem somos</li>
+                    <li class="menu_suspenso"><a href="#"></a>Projetos</li>
+                    <li class="menu_suspenso"><a href="#"></a>Espetáculos</li>
+                </ul>
+            </nav>
+            <!-- término do menu do site -->
+        </div>
+    </div>
+    <script>
+        // transição ao passar mouse na logo
         function logoAzul() {
             document.getElementById('logo').src="img/LOGO/azul_100x40.png"
-        }
-        function logoMarrom() {
-            document.getElementById('logo').src="img/LOGO/marrom_100x40.png"
         }
         function logoPreta() {
             document.getElementById('logo').src="img/LOGO/preto_100x40.png"
         }
-        
+        // fim da transição ao passar mouse na logo        
     </script>
 </body>
 </html>

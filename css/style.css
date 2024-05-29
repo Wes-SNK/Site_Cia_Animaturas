@@ -1,5 +1,22 @@
 @charset "UTF-8";
 
+.background {
+    position: relative;
+    background-color: transparent;
+    background-image: none;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(29, 180, 62, 0.801), rgba(0, 0, 0, 0.5)), url('path-to-your-image.jpg') no-repeat center center/cover;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+title {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif, sans-serif;
+}
+
 body {
     text-align: justify;
     margin: 20px;
@@ -15,8 +32,8 @@ body {
 nav#menu {
     display: inline-block;
     position: absolute;
-    top: 20px;
-    left: 200px;    
+    top: 10px;
+    left: 250px;    
 }
 
 nav#menu ul {
@@ -26,19 +43,7 @@ nav#menu ul {
 nav#menu li {
     display: inline-grid;
     float: left;  
-    background-color: lightblue;
+    background-color: transparent;
     padding: 2px;
     margin: 2px;
-}
-
-li.menu_suspenso {
-    height: 40px;
-    transition: zoom 2s;
-    
-}
-
-li.menu_suspenso:hover {
-    zoom: 120%;
-    transition: 2s;
-}
-    
+}  
