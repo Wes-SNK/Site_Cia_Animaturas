@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-.background {         
-      
-}
 
 title {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif, sans-serif;
@@ -49,9 +46,6 @@ p {
     left: 100px;
 }
 
-.menu_logo {
-    
-}
 
 .menu {
     font-family: fantasy, serif, sans-serif;
