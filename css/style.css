@@ -1,70 +1,97 @@
 @charset "UTF-8";
 
-
-title {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif, sans-serif;
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
-body {    
-    font-family: cursive, serif, sans-serif;
-    margin: 20px;
-    height: 660px;
-    background-color: rgb(0, 0, 0);    
+body {
+    background-color: black;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da janela de visualização */    
 }
 
-p {
-    align-content: center;
-}
- 
-#conteudo {
-    display: grid;
-    max-height: max-content;
-    height: auto;
-    max-width: max-content;
+header {
     width: auto;
-    align-items: center;
-    align-content: space-between;
-    background-color: rgb(87, 34, 233);
+    height: auto;
+    max-width: fit-content;
+    min-width: min-content; 
     position: relative;
-    top: auto;
-    bottom: 500px;
-    left: 50px;    
-    right: 100px;
-    border-color: 100px blueviolet;
-    border-radius: 08px;    
-    box-shadow: white, 10px;
-    padding-left: 20px;    
 }
 
-#boneco_superior {    
+#menuNav {
+    display: inline-flex;
+    width: auto;
+    max-width: max-content;
+    min-width: fit-content;
+    margin-left: 10px;
     position: relative;
-    right: 100px;
 }
 
-#boneco_inferior {
-    position: relative;
-    left: 100px;
-}
-
-
+/* estilo da lista do menu */
 .menu {
-    font-family: fantasy, serif, sans-serif;
-    font-size: 12pt;
-    display: inline-block;
-    position: absolute;   
-    top: 10px;
-    left: 100px;    
+    display: inline-flex;
+    padding: 10px;
+    margin-left: 0;
+    list-style: none; /* Remove marcadores da lista */   
 }
 
-.menu ul {
-    list-style-type: none; 
+li#logo {
+    justify-content: center;
+    margin-top: 17px;
+    margin-left: 0;
+    margin-right: 60px;
+    padding: 20px;
+    font-family: 'looney tunes', sans-serif;
+    font-size: 2.6em;
+    transition: color 0.3s; /* Transições suaves */
+}    
+
+li#logo a {    
+    color: rgb(255, 255, 234);
+    text-decoration: none;
 }
 
-.menu li {
-    display: inline-grid;
-    float: left;  
-    background-color: transparent;
-    padding: 2px;
-    margin: 2px;
-    color: blanchedalmond;
-}  
+#logo span {
+    display: inherit;      
+}
+
+#logo:hover span {
+    transition: color 0.4s ease-in-out;
+}
+
+#logoGif {
+    display:inline-flex; 
+    vertical-align: middle; 
+    width:140px; 
+    height:150px; 
+    justify-content: flex-start; 
+    margin-left: 20px;
+    transition: 0.5s ease-out;
+}
+
+/* estilo dos itens do menu */
+li.menu_suspenso {  
+    font-family: 'mansalva', sans-serif;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-top: 28px;
+    margin-left: 20px;               
+}
+
+ul.menu li a {
+    color: rgb(255, 255, 234);   
+    text-decoration: none; /* remove o sublinhado da target <a> */
+    transition: color 0.3s; /* Transições suaves */    
+}
+
+ul.menu li a:hover {
+    color: #1b73d8; /* Cor de destaque ao passar o mouse */      
+}
+
+
+
+  
