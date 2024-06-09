@@ -4,10 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/icone/favicon_azul.ico" type="image/x-icon">
+    <link rel="icon" sizes="32x32" href="img/icone/icone_azul_32x32.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/icone/icone_azul_16x16.ico" type="image/x-icon">
+    <link rel="icon" sizes="48x48" href="img/icone/icone_azul_48x48.ico" type="image/x-icon">
+    <link rel="icon" sizes="64x64" href="img/icone/icone_azul_64x64.ico" type="image/x-icon">
+    <link rel="icon" sizes="72x72" href="img/icone/icone_azul_72x72.ico" type="image/x-icon">
+    <link rel="icon" sizes="32x32" href="img/icone/icone_branco_32x32.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/icone/icone_branco_16x16.ico" type="image/x-icon">
+    <link rel="icon" sizes="48x48" href="img/icone/icone_branco_48x48.ico" type="image/x-icon">
+    <link rel="icon" sizes="64x64" href="img/icone/icone_branco_64x64.ico" type="image/x-icon">
+    <link rel="icon" sizes="72x72" href="img/icone/icone_branco_72x72.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+
+        .mansalva-regular {
+            font-family: "Mansalva", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }        
+        @font-face {
+            font-family: 'comic sans';
+            src: url('fontes/comic-sans/design.graffiti.comicsansms.ttf') format(truetype);            
+        }
+        @font-face {
+            font-family: 'looney tunes';
+            src: url(fontes/looney-tunes/Looney\ Tunes\ Tilt\ BT-FONTSMAGAZINE.ttf) format(truetype);
+        }
+    </style>
     <title>Cia. Animaturas | Fale Conosco</title>
 </head>
 <body>
-    
+    <header>       
+        <nav id="menuNav">
+            <ul class="menu">
+                <img id="logoGif" src="img/icone/icone_animado.gif" alt="Logo Cia. Animaturas Animada">
+                <li id="logo" onmouseover="changeColors()" onmouseout="resetColors()">
+                    <a href="index.html" target="_self">Cia. Animaturas</a>
+                </li>               
+                <li class="menu_suspenso"><a href="quem-somos.html" target="_self">Quem Somos</a></li>
+                <li class="menu_suspenso"><a href="projetos.html" target="_self">Nossos Projetos</a></li>
+                <li class="menu_suspenso"><a href="fale-conosco.html" target="_self">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
