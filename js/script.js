@@ -68,7 +68,7 @@
                 link.href = faviconURL;
             });
         }
-
+        
         // Verifica a preferência do usuário
         let prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
         setFavicon(prefersDarkMode ? 'dark' : 'light');
@@ -79,7 +79,7 @@
             setFavicon(newPrefersDarkMode ? 'dark' : 'light');
             prefersDarkMode = newPrefersDarkMode;
         });
-        // fim função de alterar favicon light mode e dark mode do navegador
+        // Fim função de alterar favicon light mode e dark mode do navegador
 
         // Troca o GIF animado por uma imagem estática após a reprodução inicial
         window.onload = () => {
@@ -90,7 +90,9 @@
                 logoGif.src = staticImage;
             }, 3000); // Ajuste o tempo conforme a duração do seu GIF
         };
+        // FIM
         
+        // Função para aparecer o figcaption ao passar o mouse
         const figures = document.querySelectorAll('figure');
 
         for (const figure of figures) {
@@ -102,3 +104,5 @@
             figure.querySelector('figcaption').style.display = 'none';
           });
         }
+        // FIM        
+        
