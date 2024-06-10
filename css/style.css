@@ -1,19 +1,10 @@
 @charset "UTF-8";
 
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
-    width: 100%;
-    height: 100%; /* Altura total da janela de visualização */
-}
+}    
 
 header {
     width: 100%;
@@ -25,11 +16,12 @@ header {
 
 #menuNav {
     display: inline-flex;
-    width: auto;
-    max-width: calc(100%);
+    width: 100%;
+    height: 100%;    
     min-width: fit-content;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     position: relative;
+    margin-left: 40px;
 }
 
 /* estilo da lista do menu */
@@ -41,10 +33,9 @@ header {
 }
 
 li#logo {
-    justify-content: center;
     margin-top: auto;
-    margin-left: 0;
-    margin-right: 60px;
+    margin-left: auto;
+    margin-right: 300px;
     padding: 20px;
     font-family: 'looney tunes', sans-serif;
     font-size: 2.2em;
@@ -56,19 +47,39 @@ li#logo a {
     text-decoration: none;
 }
 
-#logo span {
+/* #logo span {
     display: inherit;      
-}
+} */
 
-#logo:hover span {
+/* #logo:hover span {
     transition: color 0.4s ease-in-out;
+} */
+
+#logo a:hover{
+    /* transition: color 0.4s ease-in-out; */
+    background: linear-gradient(
+        to right,
+        violet, 
+        indigo, 
+        blue, 
+        green, 
+        yellow, 
+        orange, 
+        red, 
+        indigo, 
+        violet);
+    background-clip: text;
+    display: inline;
+    color: transparent;
+    animation: animated 5s linear infinite;
+    transition: ease-in-out;
 }
 
 #logoGif {
     display:inline-flex; 
     vertical-align: middle; 
-    width:55px; 
-    height:55px; 
+    width:50px; 
+    height:50px; 
     justify-content: flex-start; 
     margin: auto;
     margin-left: 20px;
@@ -77,16 +88,12 @@ li#logo a {
 
 /* estilo dos itens do menu */
 li.menu_suspenso {  
-    font-family: 'mansalva', sans-serif;
-    font-size: 1.2em;
-    padding: 10px;
-    /* margin-top: 28px;
-    margin-left: 20px;
-    margin-right: 100px;                */
-    padding-left: 50px;
-    margin: auto;
-    justify-content: flex-end;
-    
+    /* font-family: 'mansalva', sans-serif; */
+    font-family: 'comic sans', sans-serif;
+    font-size: 1.1em;
+    padding-inline: 15px;
+    padding-top: 25px;
+
 }
 
 ul.menu li a {
@@ -95,12 +102,22 @@ ul.menu li a {
     transition: color 0.3s; /* Transições suaves */    
 }
 
+@keyframes animated {
+    to {background-position: 161px;}
+}
+
 ul.menu li a:hover {
-    color: #1b73d8; /* Cor de destaque ao passar o mouse */      
+    color: #1b73d8; /* Cor de destaque ao passar o mouse */  
+    transition: 0.3s ease-in-out;    
+    /* background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
+    display: inline;
+    color: transparent;
+    animation: animated 5s linear infinite; */
 }
 
 main {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -110,20 +127,32 @@ main {
 }
 
 #conteudo {
-    max-width: 800px; /* Limita a largura máxima do conteúdo */
-    width: 100%;
+    width: 85%;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    text-align: center;
+    position: relative;
+    background-color: rgba(224, 214, 214, 0.05); /* Fundo semitransparente */
+    border-radius: 18px;
+}
+
+#historia {
+    width: 60%;
+    padding: 20px;
 }
 
 h1 {
-    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(233, 217, 217);
+    font-size: 2em;
+    font-weight: bolder;
+    margin-left: 75px;
 }
+
 p {
-    color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    color: rgb(233, 217, 217);
+    text-align: justify;
+    margin-left: 75px;
 } 
 
 #boneco_superior {
@@ -133,16 +162,107 @@ p {
     position: absolute;
     top: auto;
     bottom: 10%;
-    transform: rotate(-10deg);
+    transform: rotate(-15deg);
 }
 
-#boneco_inferior {
+/* #boneco_inferior {
     filter: blur(0.8px);
     float: right;
     opacity: 0.85;
     position: relative;
     bottom: auto;
     top: 70%;
-    right: 2%;
-    transform: rotate(10deg);
+    right: 5%;
+    transform: rotate(5deg);
+} */
+
+/* aside#imagensSobrepostas {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
 }
+
+aside#imagensSobrepostas img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+aside#imagensSobrepostas img:hover {
+    transform: scale(1.1);
+} */
+
+#imagensSobrepostas:hover > :not(:hover) {
+    opacity: 0.05;
+}
+
+.imagem-1, 
+.imagem-2, 
+.imagem-3, 
+.imagem-4, 
+.imagem-5, 
+.imagem-6 {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+}
+
+.imagem-1:hover, 
+.imagem-2:hover, 
+.imagem-3:hover, 
+.imagem-4:hover, 
+.imagem-5:hover, 
+.imagem-6:hover {
+    transform: scale(2.5);
+    transition: all 0.6s ease-in-out;
+}
+
+
+/* Posições diagonais para as imagens */
+.imagem-1 {
+    top: 10%;
+    left: 65%;
+    z-index: 1
+}
+.imagem-2 {
+    top: 20%;
+    left: 72%;
+    z-index: 2;
+}
+.imagem-3 {
+    top: 33%;
+    left: 65%;
+    z-index: 3;
+}
+.imagem-4 {
+    top: 50%;
+    left: 72.2%;
+    z-index: 4;
+}
+.imagem-5 {
+    top: 62%;
+    left: 65%;
+    z-index: 5;
+}
+.imagem-6 {
+    top: 73%;
+    left: 70%;
+    z-index: 6;
+}
+
+figure figcaption {
+    display: none; /* Esconde a legenda por padrão */
+    position: absolute; /* Posicionamento absoluto para flexibilidade */
+    bottom: 0; /* Posiciona a legenda na parte inferior da imagem */
+    width: 100%; /* Largura total da legenda */
+    background-color: rgba(0, 0, 0, 0.1); /* Cor de fundo semitransparente */
+    color: white; /* Cor do texto da legenda */
+    padding: 10px; /* Espaçamento interno da legenda */
+    text-align: center; /* Alinhamento central do texto */
+    top: 20%;
+  }
+  

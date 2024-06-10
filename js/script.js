@@ -1,38 +1,38 @@
 //início função de colorir cada letra da logo
-        function changeColors() {
-            const logoText = document.getElementById('logo').querySelector('a').textContent;
-            const logo = document.getElementById('logo').querySelector('a');      
-            const colors = ['#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8'];
+        // function changeColors() {
+        //     const logoText = document.getElementById('logo').querySelector('a').textContent;
+        //     const logo = document.getElementById('logo').querySelector('a');      
+        //     const colors = ['#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8', '#1b73d8'];
 
-            let animationProgress = 0;
+        //     let animationProgress = 0;
 
-            logo.innerHTML = ''; // Clear existing content
+        //     logo.innerHTML = ''; // Clear existing content
 
-            for (let i = 0; i < logoText.length; i++) {
-                const span = document.createElement('span');
-                span.textContent = logoText[i];
-                span.style.color = 'white'; // Initial color
-                logo.appendChild(span);
-            }
+        //     for (let i = 0; i < logoText.length; i++) {
+        //         const span = document.createElement('span');
+        //         span.textContent = logoText[i];
+        //         span.style.color = 'white'; // Initial color
+        //         logo.appendChild(span);
+        //     }
 
-            const animateColors = () => {
-                if (animationProgress >= logoText.length) return;
-                const span = logo.querySelectorAll('span')[animationProgress];
-                    span.style.color = colors[animationProgress % colors.length];
-                animationProgress++;
-                    setTimeout(animateColors, 60); // Adjust delay as desired in milliseconds
-            };
+        //     const animateColors = () => {
+        //         if (animationProgress >= logoText.length) return;
+        //         const span = logo.querySelectorAll('span')[animationProgress];
+        //             span.style.color = colors[animationProgress % colors.length];
+        //         animationProgress++;
+        //             setTimeout(animateColors, 60); // Adjust delay as desired in milliseconds
+        //     };
 
-            animateColors(); 
-        }
+        //     animateColors(); 
+        // }
         
-        function resetColors() {
-            const logo = document.getElementById('logo');
-            logo.innerHTML = '<a href="index.html" target="_self">Cia. Animaturas</a>';
-        }
-        // fim da função de colorir cada letra do logo
+        // function resetColors() {
+        //     const logo = document.getElementById('logo');
+        //     logo.innerHTML = '<a href="index.html" target="_self">Cia. Animaturas</a>';
+        // }
+        // // fim da função de colorir cada letra do logo
 
-            // Função para definir favicon baseado no modo (light/dark)
+        // Função para definir favicon baseado no modo (light/dark)
         function setFavicon(mode) {
             const faviconLinks = document.querySelectorAll('link[rel="icon"]');
             const lightIconPath = 'img/icone/';
@@ -91,3 +91,14 @@
             }, 3000); // Ajuste o tempo conforme a duração do seu GIF
         };
         
+        const figures = document.querySelectorAll('figure');
+
+        for (const figure of figures) {
+          figure.addEventListener('mouseover', () => {
+            figure.querySelector('figcaption').style.display = 'block';
+          });
+        
+          figure.addEventListener('mouseout', () => {
+            figure.querySelector('figcaption').style.display = 'none';
+          });
+        }
