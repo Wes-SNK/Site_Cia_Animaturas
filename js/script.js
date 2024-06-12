@@ -83,7 +83,7 @@
 
         // Troca o GIF animado por uma imagem estática após a reprodução inicial
         window.onload = () => {
-            const logoGif = document.getElementById('logoGif');
+            const logoGif = document.getElementsById('logoGif');
             const staticImage = 'img/icone/logo_cia_animaturas_80px.png'; // Caminho para a versão estática da imagem
 
             setTimeout(() => {

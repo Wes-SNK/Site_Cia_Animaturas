@@ -1,20 +1,27 @@
 @charset "UTF-8";
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgb(0, 0, 0);
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }    
 
 header {
-    width: auto;
-    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
 
 #menuNav {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;    
     position: relative;
     width: auto;
@@ -23,28 +30,23 @@ header {
 /* estilo da lista do menu */
 .menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    list-style: none; /* Remove marcadores da lista */   
+    list-style: none; /* Remove marcadores da lista */
+    padding: 50px;
+    margin: 0;   
 }
 
-#logo {
-    position: absolute;
+.logo {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    top: -10%;
-    left: 6%;
-    padding: 20px;
-    margin: auto;
+    align-items: center;
     font-family: 'looney tunes', sans-serif;
     font-size: 2.2em;
     transition: color 0.3s; /* Transições suaves */
 }    
 
-#logo a {    
+.logo a {    
     color: rgb(255, 255, 234);
     text-decoration: none;
+    margin-left: -5%;
 }
 
 /* utilizado na função JS Change Colors
@@ -62,12 +64,12 @@ header {
     to {background-position: 161px;}
 }
 
-#logo:hover {
+.logo:hover {
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
 }
 
-#logo a:hover{
+.logo a:hover{
     transition: color 0.4s ease-in-out;
     background: linear-gradient(
         to right,
@@ -103,8 +105,7 @@ li.menu_suspenso {
     /* font-family: 'mansalva', sans-serif; */
     font-family: 'comic sans', sans-serif;
     font-size: 1.1em;
-    padding-inline: 15px;
-    padding-top: 25px;
+    padding-inline: 15px;    
 }
 
 ul.menu li a {
@@ -113,9 +114,77 @@ ul.menu li a {
     transition: color 0.3s; /* Transições suaves */    
 }
 
-ul.menu li a:hover {
-    color: #1b73d8; /* Cor de destaque ao passar o mouse */  
+ul.menu li a:hover {  
     transition: 0.3s ease-in-out;
+    transition: color 0.4s ease-in-out;
+    background: linear-gradient(to left, rgb(30, 30, 220),rgb(20, 20, 250), blue);   
+    background-clip: text;
+    display: inline;
+    color: transparent;
+    animation: animated 5s linear infinite;
+    transition: ease-in-out;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #logo {
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    li.menu_suspenso {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    #logo {
+        font-size: 1.8em;
+    }
+
+    li.menu_suspenso {
+        font-size: 1em;
+        padding-inline: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        padding: 5px;
+    }
+
+    #logo {
+        font-size: 1.5em;
+    }
+
+    .menu {
+        align-items: center;
+    }
+
+    li.menu_suspenso {
+        font-size: 0.9em;
+        padding-inline: 5px;
+    }
 }
 
 main {
