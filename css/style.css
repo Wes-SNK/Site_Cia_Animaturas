@@ -87,7 +87,7 @@ header {
     background-clip: text;
     display: inline;
     color: transparent;
-    animation: animated 5s linear infinite;
+    animation: animated 7s linear infinite;
     transition: ease-in-out;
 }
 
