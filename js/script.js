@@ -83,7 +83,7 @@
 
         // Troca o GIF animado por uma imagem estática após a reprodução inicial
         window.onload = () => {
-            const logoGif = document.getElementsById('logoGif');
+            const logoGif = document.getElementById('logoGif');
             const staticImage = 'img/icone/logo_cia_animaturas_80px.png'; // Caminho para a versão estática da imagem
 
             setTimeout(() => {
@@ -106,3 +106,18 @@
         }
         // FIM        
         
+        // Efeito tremer Imagem Boneco
+        document.addEventListener('DOMContentLoaded', function() {
+            const bonecoSuperior = document.getElementById('boneco_superior');
+        
+            bonecoSuperior.addEventListener('click', function() {
+                // Adiciona a classe 'trembling' ao elemento
+                bonecoSuperior.classList.add('trembling');
+        
+                // Remove a classe 'trembling' após a duração da animação (0.5s)
+                setTimeout(function() {
+                    bonecoSuperior.classList.remove('trembling');
+                }, 500);
+            });
+        });
+        // Fim Efeito Tremer

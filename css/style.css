@@ -35,7 +35,7 @@ header {
     margin: 0;   
 }
 
-.logo {
+#logo {
     display: flex;
     align-items: center;
     font-family: 'looney tunes', sans-serif;
@@ -43,7 +43,7 @@ header {
     transition: color 0.3s; /* Transições suaves */
 }    
 
-.logo a {    
+#logo a {    
     color: rgb(255, 255, 234);
     text-decoration: none;
     margin-left: -5%;
@@ -64,20 +64,19 @@ header {
     to {background-position: 161px;}
 }
 
-.logo:hover {
+#logo:hover {
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
 }
 
-.logo a:hover{
+#logo a:hover{
     transition: color 0.4s ease-in-out;
     background: linear-gradient(
         to right,
-        pink,
+        blue,
+        rgb(65, 65, 189),
         violet,
         indigo,
-        rgb(65, 65, 189), 
-        blue, 
         green, 
         yellow, 
         orange, 
@@ -117,7 +116,7 @@ ul.menu li a {
 ul.menu li a:hover {  
     transition: 0.3s ease-in-out;
     transition: color 0.4s ease-in-out;
-    background: linear-gradient(to left, rgb(30, 30, 220),rgb(20, 20, 250), blue);   
+    background: linear-gradient(to right, rgb(30, 30, 220),rgb(20, 20, 250), blue, rgb(20, 200, 250));   
     background-clip: text;
     display: inline;
     color: transparent;
@@ -226,14 +225,36 @@ p {
     margin-left: 75px;
 } 
 
+/* #boneco_superior {
+    filter: blur(0.8px);
+    opacity: 0.7;
+    position: absolute;
+    transform: rotate(-15deg);
+    display: flex;
+} */
+
 #boneco_superior {
     filter: blur(0.8px);
     opacity: 0.7;
-    float: left;
     position: absolute;
-    top: auto;
-    bottom: 10%;
     transform: rotate(-15deg);
+    display: flex;
+    top: 50%; /* Alinha a imagem verticalmente ao centro da tela */
+    left: 18px; /* Posiciona a imagem à esquerda da tela */
+    transform: translateY(-30%) rotate(-15deg); /* Ajusta a posição para centralizar verticalmente e aplica a rotação */
+    cursor: pointer; /* Indica que o elemento é clicável */
+}
+
+@keyframes tremble {
+    0% { transform: translateY(-50%) rotate(-15deg) translateX(0); }
+    25% { transform: translateY(-50%) rotate(-15deg) translateX(-5px); }
+    50% { transform: translateY(-50%) rotate(-15deg) translateX(5px); }
+    75% { transform: translateY(-50%) rotate(-15deg) translateX(-5px); }
+    100% { transform: translateY(-50%) rotate(-15deg) translateX(0); }
+}
+
+.trembling {
+    animation: tremble 0.5s ease-in-out;
 }
 
 /* Aplica o efeito opacidade em todas as outras imagens que não estão em hover */
