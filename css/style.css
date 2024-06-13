@@ -302,6 +302,11 @@ p.cnpj {
     margin-left: 20px;
 }
 
+#copyright {
+    display: inline-flex;
+    margin: 82px 0 0 350px;
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 1024px) {
     header {
