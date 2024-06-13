@@ -49,17 +49,6 @@ header {
     margin-left: -5%;
 }
 
-/* utilizado na função JS Change Colors
-#logo span {
-    display: inherit;      
-} */
-
-/* #logo:hover span {
-    transition: color 0.4s ease-in-out;
-} 
-*/
-
-/* Cria a animação animated, utilizada no efeito de cor na logo */
 @keyframes animated {
     to {background-position: 161px;}
 }
@@ -124,6 +113,194 @@ ul.menu li a:hover {
     transition: ease-in-out;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#conteudo {
+    width: 85%;
+    padding: 20px;
+    position: relative;
+    background-color: rgba(224, 214, 214, 0.05); /* Fundo semitransparente */
+    border-radius: 18px;
+}
+
+#historia {
+    width: 60%;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(233, 217, 217);
+    font-size: 2em;
+    font-weight: bolder;
+    margin-left: 75px;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    color: rgb(233, 217, 217);
+    text-align: justify;
+    margin-left: 75px;
+} 
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(233, 217, 217);
+    font-size: 1.6em;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+p.cnpj { 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    color: rgb(233, 217, 217);
+    text-align: justify;
+    margin-left: 20px;
+}
+
+/* Aplica o efeito opacidade em todas as outras imagens que não estão em hover */
+#imagensSobrepostas:hover > :not(:hover) {
+    opacity: 0.05;
+}
+
+/* ajusta as imagens na tela */
+.imagem-1, 
+.imagem-2, 
+.imagem-3, 
+.imagem-4, 
+.imagem-5, 
+.imagem-6 {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+}
+
+/* Aplica efeito de zoom nas imagens */
+.imagem-1:hover, 
+.imagem-2:hover, 
+.imagem-3:hover, 
+.imagem-4:hover, 
+.imagem-5:hover, 
+.imagem-6:hover {
+    transform: scale(2.5);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Posições diagonais para as imagens utilizando z-index */
+.imagem-1 {
+    top: 10%;
+    left: 65%;
+    z-index: 1
+}
+.imagem-2 {
+    top: 20%;
+    left: 72%;
+    z-index: 2;
+}
+.imagem-3 {
+    top: 33%;
+    left: 65%;
+    z-index: 3;
+}
+.imagem-4 {
+    top: 50%;
+    left: 72.2%;
+    z-index: 4;
+}
+.imagem-5 {
+    top: 62%;
+    left: 65%;
+    z-index: 5;
+}
+.imagem-6 {
+    top: 73%;
+    left: 70%;
+    z-index: 6;
+}
+
+/* Aplica estilo ao figcaption para ficar escondido */
+figure figcaption {
+    display: none;
+    position: absolute; /* Manter position: absolute; */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 7;
+    border-radius: 8px;
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out; /* Adicionar transição */
+}
+
+/* Posiciona individualmente cada figcaption */
+figcaption.foto-1 {
+    bottom: 62%;
+    left: 60%;
+}
+figcaption.foto-2 {
+    bottom: 52%;
+    left: 62%;
+}
+figcaption.foto-3 {
+    bottom: 40%;
+    left: 51.5%;
+}
+figcaption.foto-4 {
+    bottom: 28%;
+    left: 60%;
+}
+figcaption.foto-5 {
+    top: 84.5%;
+    left: 52.5%;
+}
+figcaption.foto-6 {
+    bottom: 0;
+    left: 65%;
+}
+
+#boneco_superior {
+    filter: blur(0.8px);
+    opacity: 0.7;
+    position: absolute;
+    transform: rotate(-15deg);
+    display: flex;
+    top: 50%; /* Alinha a imagem verticalmente ao centro da tela */
+    left: 18px; /* Posiciona a imagem à esquerda da tela */
+    transform: translateY(-30%) rotate(-15deg); /* Ajusta a posição para centralizar verticalmente e aplica a rotação */ 
+    cursor: pointer; /* Indica que o elemento é clicável */
+}
+
+@keyframes tremble {
+    0% { transform: translateY(-50%) rotate(-15deg) translateX(0); }
+    25% { transform: translateY(-50%) rotate(-15deg) translateX(-5px); }
+    50% { transform: translateY(-50%) rotate(-15deg) translateX(5px); }
+    75% { transform: translateY(-50%) rotate(-15deg) translateX(-5px); }
+    100% { transform: translateY(-50%) rotate(-15deg) translateX(0); }
+}
+
+.trembling {
+    animation: tremble 0.5s ease-in-out;
+}
+
+#rodape {
+    display: flex;
+    background-color: rgb(20, 30, 40, 0.3);
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 1024px) {
     header {
@@ -184,179 +361,4 @@ ul.menu li a:hover {
         font-size: 0.9em;
         padding-inline: 5px;
     }
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    min-height: 80vh; /* Garante que o conteúdo principal tenha altura mínima */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-#conteudo {
-    width: 85%;
-    padding: 20px;
-    position: relative;
-    background-color: rgba(224, 214, 214, 0.05); /* Fundo semitransparente */
-    border-radius: 18px;
-}
-
-#historia {
-    width: 60%;
-    padding: 20px;
-}
-
-h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(233, 217, 217);
-    font-size: 2em;
-    font-weight: bolder;
-    margin-left: 75px;
-}
-
-p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.2em;
-    color: rgb(233, 217, 217);
-    text-align: justify;
-    margin-left: 75px;
-} 
-
-/* #boneco_superior {
-    filter: blur(0.8px);
-    opacity: 0.7;
-    position: absolute;
-    transform: rotate(-15deg);
-    display: flex;
-} */
-
-#boneco_superior {
-    filter: blur(0.8px);
-    opacity: 0.7;
-    position: absolute;
-    transform: rotate(-15deg);
-    display: flex;
-    top: 50%; /* Alinha a imagem verticalmente ao centro da tela */
-    left: 18px; /* Posiciona a imagem à esquerda da tela */
-    transform: translateY(-30%) rotate(-15deg); /* Ajusta a posição para centralizar verticalmente e aplica a rotação */
-    cursor: pointer; /* Indica que o elemento é clicável */
-}
-
-@keyframes tremble {
-    0% { transform: translateY(-50%) rotate(-15deg) translateX(0); }
-    25% { transform: translateY(-50%) rotate(-15deg) translateX(-5px); }
-    50% { transform: translateY(-50%) rotate(-15deg) translateX(5px); }
-    75% { transform: translateY(-50%) rotate(-15deg) translateX(-5px); }
-    100% { transform: translateY(-50%) rotate(-15deg) translateX(0); }
-}
-
-.trembling {
-    animation: tremble 0.5s ease-in-out;
-}
-
-/* Aplica o efeito opacidade em todas as outras imagens que não estão em hover */
-#imagensSobrepostas:hover > :not(:hover) {
-    opacity: 0.05;
-}
-
-/* ajusta as imagens na tela */
-.imagem-1, 
-.imagem-2, 
-.imagem-3, 
-.imagem-4, 
-.imagem-5, 
-.imagem-6 {
-    width: 200px;
-    height: auto;
-    margin-bottom: 20px;
-    transition: all 0.6s ease-in-out;
-    position: absolute;
-}
-
-/* Aplica efeito de zoom nas imagens */
-.imagem-1:hover, 
-.imagem-2:hover, 
-.imagem-3:hover, 
-.imagem-4:hover, 
-.imagem-5:hover, 
-.imagem-6:hover {
-    transform: scale(2.5);
-    transition: all 0.6s ease-in-out;
-}
-
-
-/* Posições diagonais para as imagens utilizando z-index */
-.imagem-1 {
-    top: 10%;
-    left: 65%;
-    z-index: 1
-}
-.imagem-2 {
-    top: 20%;
-    left: 72%;
-    z-index: 2;
-}
-.imagem-3 {
-    top: 33%;
-    left: 65%;
-    z-index: 3;
-}
-.imagem-4 {
-    top: 50%;
-    left: 72.2%;
-    z-index: 4;
-}
-.imagem-5 {
-    top: 62%;
-    left: 65%;
-    z-index: 5;
-}
-.imagem-6 {
-    top: 73%;
-    left: 70%;
-    z-index: 6;
-}
-
-/* Aplica estilo ao figcaption para ficar escondido */
-figure figcaption {
-    display: none; /* Esconde a legenda por padrão */
-    position: absolute; /* Posicionamento absoluto para flexibilidade */
-    width: fit-content; /* Largura para ajustar o conteúdo */
-    max-width: fit-content;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 10px;
-    text-align: center; /* Alinhamento à esquerda */
-    z-index: 7; /* Garantir que a legenda esteja acima de outros elementos */
-    border-radius: 8px;
-    font-weight: bolder;
-}
-
-/* Posiciona individualmente cada figcaption */
-figcaption.foto-1 {
-    bottom: 62%;
-    left: 60%;
-}
-figcaption.foto-2 {
-    bottom: 52%;
-    left: 62%;
-}
-figcaption.foto-3 {
-    bottom: 40%;
-    left: 51.5%;
-}
-figcaption.foto-4 {
-    bottom: 28%;
-    left: 60%;
-}
-figcaption.foto-5 {
-    top: 84.5%;
-    left: 52.5%;
-}
-figcaption.foto-6 {
-    bottom: 0;
-    left: 65%;
 }
